@@ -1,41 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lanches</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <h1>lanches</h1>
     <nav class="navbar">
-        <ul class="nav-links">
-            <div class="logo">Minha Lanchonete</div>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="cardapio.html">Cardapio</a></li>
-            <li><a href="sobre.html">Sobre Nós</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+      <ul class="nav-links">
+        <div class="logo">Minha Lanchonete</div>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="cardapio.html">Cardapio</a></li>
+        <li><a href="sobre.html">Sobre Nós</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
     </nav>
+
     <div id="container-Carrinho"></div>
+
     <div class="lanches">
-        <div class="produto-card">
-            <h2>Hambuguer</h2>
-            <p>Pão, carne, queijo, presunto, alface e tomate.</p>
-            <span>Preço R$ 15,90</span>
-            <button class="btn-adicionar" data-nome="Hambuguer" data-preco="15.90">Adicionar ao carrinho</button>
-        </div>
-        <div class="produto-card">
-            <h2>X-Bacon</h2>
-            <p>Pão, carne, queijo, presunto, bacon, molho especial, alface e tomate.</p>
-            <span>Preço R$ 19,90</span>
-            <button class="btn-adicionar" data-nome="X-Bacon" data-preco="19.90">Adicionar ao carrinho</button>
-        </div>
-        <a href="cardapio.html" class="voltar-link">Voltar para o cardápio</a>
+      <div class="produto-card">
+        <h2>Hambuguer</h2>
+        <p>Pão, carne, queijo, presunto, alface e tomate.</p>
+        <span>Preço R$ 15,90</span>
+        <button class="btn-adicionar" data-nome="Hambuguer" data-preco="15.90">
+          Adicionar ao carrinho
+        </button>
+      </div>
+      <div class="produto-card">
+        <h2>X-Bacon</h2>
+        <p>
+          Pão, carne, queijo, presunto, bacon, molho especial, alface e tomate.
+        </p>
+        <span>Preço R$ 19,90</span>
+        <button class="btn-adicionar" data-nome="X-Bacon" data-preco="19.90">
+          Adicionar ao carrinho
+        </button>
+      </div>
+      <a href="cardapio.html" class="voltar-link">Voltar para o cardápio</a>
     </div>
 
-
     <script src="carrinho.js"></script>
-</body>
+  </body>
 </html>
