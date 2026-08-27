@@ -108,7 +108,7 @@ h2 {
 }
 
 /* Card individual de item (usado no lanches.html) */
-.hambuguer-simples {
+.produto-card {
     background-color: var(--color-card-bg);
     border: 2px dashed var(--color-mustard);
     border-radius: 8px;
@@ -117,13 +117,13 @@ h2 {
     position: relative;
 }
 
-.hambuguer-simples p {
+.produto-card p {
     color: #5a4a3f;
     margin-bottom: 0.75rem;
 }
 
 /* Preço em destaque, estilo "carimbo" */
-.hambuguer-simples span,
+.produto-card span,
 .Bebidas span,
 .Sobremesas span {
     display: inline-block;
@@ -178,6 +178,8 @@ h2 {
     padding: 1.25rem 1.5rem;
     margin: 1.5rem auto 2rem;
     max-width: 900px;
+    width: 300px;
+    order: 2;
 }
 
 #container-Carrinho p {
@@ -224,4 +226,39 @@ footer {
         font-size: 1.5rem;
         padding: 1rem 1.5rem;
     }
+}
+.pagina-conteudo{
+    display: flex;
+    gap: 1px;
+}
+.lanches{
+    flex: 1;
+    order: 1;
+}
+/* Linha do item dentro do carrinho: nome/preço de um lado, botão do outro */
+#container-Carrinho p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.btn-remover {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    padding: 0.2rem 0.65rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-remover:hover {
+    background-color: var(--color-accent);
+    color: #fff;
 }
