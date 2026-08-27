@@ -1,15 +1,50 @@
-*{
+/* ===== TOKENS (variáveis de cor e fonte) ===== */
+:root {
+    --color-bg: #FFF8EF;
+    --color-text: #2B1B12;
+    --color-accent: #E4572E;
+    --color-accent-dark: #C43F1D;
+    --color-mustard: #E8A33D;
+    --color-fresh: #6B8E23;
+    --color-card-bg: #FFFFFF;
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* ===== RESET E BASE ===== */
+* {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--font-body);
 }
-h1{
-    background-color: burlywood;
-    color: white;
 
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    line-height: 1.6;
 }
-.navbar{
+
+/* ===== TÍTULO PRINCIPAL ===== */
+h1 {
+    background-color: var(--color-accent);
+    color: #FFFFFF;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 2rem;
+    padding: 1.5rem 2rem;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    color: var(--color-accent-dark);
+    margin-bottom: 0.4rem;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -18,21 +53,25 @@ h1{
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-.logo{
-    color: #ffffff;
+
+.logo {
+    color: var(--color-mustard);
+    font-family: var(--font-display);
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 700;
     letter-spacing: 1px;
     cursor: pointer;
 }
-.nav-links a{
+
+.nav-links {
     list-style: none;
     display: flex;
     align-items: center;
     gap: 1.5rem;
 }
+
 .nav-links a {
     text-decoration: none;
     color: #ccc;
@@ -40,25 +79,149 @@ h1{
     font-weight: 500;
     transition: color 0.3s ease;
 }
-.nav-links a:hover{
-    color: #3498db;
+
+.nav-links a:hover {
+    color: var(--color-mustard);
 }
-.nav-links .cta-btn{
-    background-color: #3498db;
+
+.nav-links .cta-btn {
+    background-color: var(--color-accent);
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s ease;
 }
-.nav-links .cta-btn:hover{
-    background-color: #2980b9;
+
+.nav-links .cta-btn:hover {
+    background-color: var(--color-accent-dark);
     color: #fff;
 }
+
+/* ===== CONTAINERS DE CARDÁPIO (lanches, bebidas, sobremesas) ===== */
+.lanches,
+.Bebidas,
+.Sobremesas,
+.contato {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Card individual de item (usado no lanches.html) */
+.hambuguer-simples {
+    background-color: var(--color-card-bg);
+    border: 2px dashed var(--color-mustard);
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.25rem;
+    position: relative;
+}
+
+.hambuguer-simples p {
+    color: #5a4a3f;
+    margin-bottom: 0.75rem;
+}
+
+/* Preço em destaque, estilo "carimbo" */
+.hambuguer-simples span,
+.Bebidas span,
+.Sobremesas span {
+    display: inline-block;
+    background-color: var(--color-fresh);
+    color: #fff;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Itens sem card (bebidas/sobremesas ainda usam h2+p soltos) */
+.Bebidas h2,
+.Sobremesas h2 {
+    margin-top: 1.25rem;
+}
+
+.Bebidas p,
+.Sobremesas p,
+.contato p {
+    color: #5a4a3f;
+}
+
+/* ===== BOTÕES ===== */
+.btn-adicionar {
+    display: block;
+    background-color: var(--color-accent);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: var(--color-accent-dark);
+}
+
+.btn-adicionar:active {
+    transform: scale(0.97);
+}
+
+/* ===== CARRINHO ===== */
+#container-Carrinho {
+    background-color: var(--color-card-bg);
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 1.25rem 1.5rem;
+    margin: 1.5rem auto 2rem;
+    max-width: 900px;
+}
+
+#container-Carrinho p {
+    padding: 0.35rem 0;
+    border-bottom: 1px solid #f1e9dd;
+}
+
+#container-Carrinho strong {
+    color: var(--color-accent-dark);
+}
+
+/* ===== LINK "VOLTAR" ===== */
+.voltar-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.voltar-link:hover {
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* ===== RESPONSIVO ===== */
 @media (max-width: 768px) {
-    .nav-links{
+    .nav-links {
         gap: 1rem;
+        flex-wrap: wrap;
     }
-    .nav-links a{
+    .nav-links a {
         font-size: 0.9rem;
+    }
+    h1 {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
     }
 }
